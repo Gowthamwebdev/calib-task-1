@@ -1,0 +1,102 @@
+@use "../styles/settings/mixins";
+@use "../styles/settings/utilities";
+@use "../styles/settings/variable";
+@use "../styles/antd-components/antd_button";
+@use "./components/navbar.module";
+@use "./components/dashboard.module";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+
+.material-symbols-rounded {
+	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+:root {
+	--white-color: #f6f6f6;
+
+	--stroke-primary: #e4e4e7;
+	--text-foreground: #60646c;
+	--border-graph: #01012e;
+	--background-primary: #fafafa;
+
+	// Reference
+	--button-filled-error-text: var(--brand-color-900);
+	/* White color */
+	--white-color: #ffffff;
+	--white-color-400: #e4e2e2;
+	--primary-color: #fb7000;
+
+	/* Black color  */
+	--black-color-400: #051117;
+	--black-color: #0b0b0b;
+
+	/* Gray color */
+	--gray-color: #b0b0b0;
+
+	/*Text Colors*/
+	--text-primary: var(--neutral-color-950);
+	--text-secondary: var(--neutral-color-700);
+	--text-tertiary: var(--neutral-color-500);
+	--text-table-default: var(--neutral-color-700);
+	--text-success: var(--green-color-500);
+	--text-warning: var(--yellow-color-500);
+	--text-error: var(--red-color-500);
+	--text-error-secondary: var(--red-color-600);
+	--text-brand-secondary: var(--brand-color-600);
+	--text-button-primary: var(--brand-color-800);
+	--text-light-gray: var(--neutral-color-400);
+	--brand-tertiary: var(--brand-color-400);
+	--text-black-secondary: var(--neutral-color-900);
+	--text-button-filled-primary: var(--neutral-color-50);
+	/* Icon Colors */
+	--dropdown-icon: var(--neutral-color-950);
+	--icon-tertiary: var(--neutral-color-500);
+
+	/* Background colors */
+	--background-white: var(--white);
+	--background-secondary: var(--neutral-color-100);
+	--warning: var(--yellow-color-100);
+	--error: var(--red-color-100);
+	--default: var(--red-color-500);
+	--error-secondary: var(--red-color-50);
+}
+
+/* Basic CSS Properties added here */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px !important;
+	scroll-behavior: smooth;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: var(--surface-overall-background);
+	font-family: "Bricolage Grotesque", sans-serif !important;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+:is(p, h1, h2, h3, h4, h5, h6) {
+	font-family: "Bricolage Grotesque", sans-serif !important;
+	margin: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		// text-decoration: underline !important;
+		color: var(--brand-color-400) !important;
+	}
+}

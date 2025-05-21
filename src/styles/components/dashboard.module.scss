@@ -1,0 +1,231 @@
+.dashboard-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-inline: 100px;
+	width: 100vw !important;
+	height: 100vh !important;
+	background-color: var(--black-color-400) !important;
+
+	.dashboard-image-container {
+		text-align: center;
+	}
+
+	.dashboard-content-container {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		gap: 8px;
+
+		.dashboard-content {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+
+			.dashboard-content-heading {
+				font-size: 54px;
+				line-height: 76px;
+				font-weight: 800;
+				color: var(--white-color);
+				font: bold;
+				max-width: 750px;
+
+				.highlight-primary {
+					color: var(--primary-color);
+				}
+			}
+
+			.dashboard-content-para {
+				font-size: 18px;
+				line-height: 40px;
+				font-weight: 500;
+				color: var(--white-color);
+				max-width: 560px;
+				width: 100%;
+			}
+
+			.mobileapp-details-container {
+				display: flex;
+				flex-direction: row;
+				gap: 48px;
+				font-weight: 500 !important;
+				font-size: 1.125rem !important;
+				line-height: 40px !important;
+				color: var(--white-color);
+
+				.mobileapp-details-child {
+					display: flex;
+					gap: 1rem;
+					flex-direction: column;
+
+					h2 {
+						font-size: 1.5rem;
+						font-weight: 600;
+						color: var(--white-color);
+						margin: 0;
+					}
+					p {
+						font-size: 1.125rem;
+						line-height: 40px;
+						font-weight: 500;
+						color: var(--white-color);
+						margin: 0;
+					}
+				}
+			}
+			.mobileapp-event-details {
+				position: absolute;
+				bottom: 90px;
+				right: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 35px 15px;
+				border-radius: 50%;
+				cursor: pointer;
+				border: 1px solid var(--white-color);
+
+				&::before {
+					content: "";
+					position: absolute;
+					height: 135px;
+					width: 135px;
+					border-radius: 50%;
+					border: 1px solid var(--white-color);
+					opacity: 1;
+					transition: opacity 0.5s ease-in-out;
+				}
+				&:hover::before {
+					opacity: 0;
+				}
+
+				.contact-us {
+					position: relative;
+					max-width: 100px;
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					gap: 1rem;
+
+					p {
+						color: var(--white-color);
+						margin: 0;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	.dashboard-options-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		grid-area: 8px;
+		padding-bottom: 20px;
+		margin-top: 20px;
+
+		.video-btn {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 1rem;
+
+			span {
+				font-size: 1rem;
+				line-height: 40px;
+				font-weight: 500;
+				color: var(--white-color);
+			}
+		}
+
+		.sliding-options {
+			display: flex;
+			cursor: pointer;
+			gap: 3rem;
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 40px;
+			color: var(--white-color);
+
+			span {
+				transition: all ease-in-out;
+				&:hover {
+					color: var(--primary-color);
+				}
+				&:active {
+					border-bottom: 1px solid var(--white-color);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.dashboard-container {
+		padding: 2rem;
+		justify-content: space-between;
+		padding-inline: 24px;
+
+		.dashboard-content-container {
+			align-items: center;
+			flex-direction: column;
+			gap: 1rem;
+
+			.dashboard-content {
+				align-items: center;
+				gap: 1.5rem;
+
+				.dashboard-content-heading {
+					text-align: center;
+					font-size: 32px;
+					line-height: 44px;
+				}
+
+				.dashboard-content-para {
+					text-align: center;
+					font-size: 14px;
+					line-height: 22px;
+				}
+
+				.mobileapp-details-container {
+					gap: 24px;
+
+					.mobileapp-details-child {
+						align-items: center;
+						font-size: 16;
+						font-weight: 500;
+						line-height: 28px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1180px) {
+	.dashboard-image-container {
+		display: none;
+	}
+	.dashboard-container {
+		justify-content: space-between;
+		padding-inline: 20px;
+		.dashboard-content-container {
+			padding-top: 20px;
+			justify-content: center;
+			.dashboard-content {
+				text-align: center;
+				align-items: center;
+				justify-content: center;
+				gap: 2rem;
+			}
+		}
+	}
+	.dashboard-options-container {
+		align-items: center;
+		justify-content: center;
+	}
+}
