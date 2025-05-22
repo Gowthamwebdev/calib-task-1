@@ -2,8 +2,8 @@
 @use "../styles/settings/utilities";
 @use "../styles/settings/variable";
 @use "../styles/antd-components/antd_button";
-@use "./components/navbar.module";
-@use "./components/dashboard.module";
+@use "../styles/antd-components/antd_tabs";
+@use "../styles/components/blockchain_animation.module";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
@@ -30,13 +30,14 @@
 	/* Black color  */
 	--black-color-400: #051117;
 	--black-color: #0b0b0b;
+	--navbar-black: #080808;
 
 	/* Gray color */
 	--gray-color: #b0b0b0;
 
 	/*Text Colors*/
 	--text-primary: var(--neutral-color-950);
-	--text-secondary: var(--neutral-color-700);
+	--text-secondary: var(--gray-color);
 	--text-tertiary: var(--neutral-color-500);
 	--text-table-default: var(--neutral-color-700);
 	--text-success: var(--green-color-500);
@@ -64,6 +65,8 @@
 
 /* Basic CSS Properties added here */
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
